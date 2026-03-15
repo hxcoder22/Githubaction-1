@@ -14,8 +14,6 @@ jobs:
                    echo "My first Github Action Job"
                    ls
                    cat README.md
-            - name: generate ASCII artwork
-              run: cowsay -f cat "I am cat.... HAHAHAH" >> cat.txt
 
             # - name: list files
             #   run: ls

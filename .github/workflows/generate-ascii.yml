@@ -1,0 +1,25 @@
+name: my first CICD implementation
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout-repo
+              uses: actions/checkout@v6
+
+            - name: Install cowsay Program
+              run: sudo apt-get install cowsay -y
+              
+            - name: Execute Cowsay CMD
+              run: cowsay -f cat "I am cat... HA HA HA" >> cat.txt
+
+            - name: Test if file exists
+              run: grep -i 'cat' cat.txt
+
+            - name: Read and List file
+              run: |                   
+                   ls -ltra
+                   cat README.md
+
