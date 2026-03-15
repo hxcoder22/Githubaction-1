@@ -7,19 +7,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout-repo
-              uses: actions/checkout@v6
-
-            - name: Install cowsay Program
-              run: sudo apt-get install cowsay -y
-              
-            - name: Execute Cowsay CMD
-              run: cowsay -f dragon "I am dragon... HA HA HA" >> dragon.txt
-
-            - name: Test if file exists
-              run: grep -qi "dragon" dragon.txt || echo "No dragon found"
+              uses: actions/checkout@v6           
 
             - name: Read and List file
-              run: |                   
-                   ls -ltra
-                   cat dragon.txt
+              run: ls -ltra
+            - name: Executing Shell Script
+              run: ./ascii-script.sh
+                   
 
