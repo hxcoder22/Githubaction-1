@@ -1,0 +1,16 @@
+name: my first CICD implementation
+
+on: push
+
+job:
+    first_job:
+        runs_on: ubuntu-latest
+        steps:
+            - name: welcome message
+              run: echo "My first Github Action Job"
+
+            - name: list files
+              run: ls
+
+            - name: read file
+              run: cat README.md
