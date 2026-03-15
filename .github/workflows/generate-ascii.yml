@@ -1,4 +1,4 @@
-name: my first CICD implementation
+name: Generate ascii workflow
 
 on: push
 
@@ -16,7 +16,7 @@ jobs:
               run: cowsay -f dragon "I am cat... HA HA HA" >> dragon.txt
 
             - name: Test if file exists
-              run: grep -i 'dragon' dragon.txt
+              run: grep -i "dragon" dragon.txt
 
             - name: Read and List file
               run: |                   
